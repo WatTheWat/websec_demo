@@ -1,0 +1,26 @@
+services:
+  php-apache:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "80:80"
+    volumes:
+      - ./app:/var/www/html
+    links:
+      - 'mariadb'
+
+  mariadb:
+    image: mariadb:10.1
+    volumes:
+      - ./mariadb:/var/lib/mysql
+    environment:
+      TZ: "America/Chicago"
+      MYSQL_ALLOW_EMPTY_PASSWORD: "no"
+      MYSQL_ROOT_PASSWORD: "root"
+      MYSQL_USER: 'test'
+      MYSQL_PASSWORD: 'testpassword'
+      MYSQL_DATABASE: "testdb"
+
+volumes:
+  mariadb:
