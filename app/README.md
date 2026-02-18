@@ -6,5 +6,6 @@ Vulnerabilities:
 4. Dashboard.php just prints username
 5. register.php password is not hashed
 6. register.php username is not sanitzied - XSS scripting
+7. index.php - tells us php version, os version, program information, and even services / packages installed. REALLY BAD
 
 Fixes:
