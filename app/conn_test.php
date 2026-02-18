@@ -1,11 +1,7 @@
 <?php
-$servername = "mariadb";
-$username = "test";
-$password = "testpassword";
-$dbname = "testdb";
 
 // Create connection
-$conn = new mysqli($servername, $username, $password, $dbname);
+$conn = new mysqli("mariadb", "test", "testpassword", "testdb");
 
 // Check connection
 if ($conn->connect_error) {
