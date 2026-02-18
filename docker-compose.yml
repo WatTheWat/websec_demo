@@ -13,7 +13,8 @@ services:
   mariadb:
     image: mariadb:10.1
     volumes:
-      - ./mariadb:/var/lib/mysql
+      - mariadb:/var/lib/mysql
+      - ./data.sql:/docker-entrypoint-initdb.d/data.sql
     environment:
       TZ: "America/Chicago"
       MYSQL_ALLOW_EMPTY_PASSWORD: "no"
