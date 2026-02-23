@@ -8,6 +8,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $email = $_POST['email'];
     $password = $_POST['password'];
 
+    
+
     // Perepare and execute
     $query = "SELECT * FROM userdata WHERE email = '$email' AND password = '$password'";
     $result = mysqli_query($conn, $query);

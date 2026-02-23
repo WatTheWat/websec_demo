@@ -17,7 +17,7 @@ services:
       - ./data.sql:/docker-entrypoint-initdb.d/data.sql
     environment:
       TZ: "America/Chicago"
-      MYSQL_ALLOW_EMPTY_PASSWORD: "no"
+      MYSQL_ALLOW_EMPTY_PASSWORD: "yes"
       MYSQL_ROOT_PASSWORD: "root"
       MYSQL_USER: 'test'
       MYSQL_PASSWORD: 'testpassword'
